@@ -1,0 +1,49 @@
+{
+  "hash": "eb25596d",
+  "configHash": "69ccc462",
+  "lockfileHash": "b791a5c9",
+  "browserHash": "1b40ef52",
+  "optimized": {
+    "vue": {
+      "src": "../../node_modules/.pnpm/vue@3.4.27_typescript@5.4.5/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "a436b2e0",
+      "needsInterop": false
+    },
+    "pinia": {
+      "src": "../../node_modules/.pnpm/pinia@2.1.7_typescript@5.4.5_vue@3.4.27_typescript@5.4.5_/node_modules/pinia/dist/pinia.mjs",
+      "file": "pinia.js",
+      "fileHash": "184508a4",
+      "needsInterop": false
+    },
+    "element-plus": {
+      "src": "../../node_modules/.pnpm/element-plus@2.7.3_vue@3.4.27_typescript@5.4.5_/node_modules/element-plus/es/index.mjs",
+      "file": "element-plus.js",
+      "fileHash": "e778d165",
+      "needsInterop": false
+    },
+    "element-plus/es/components/message/style/css": {
+      "src": "../../node_modules/.pnpm/element-plus@2.7.3_vue@3.4.27_typescript@5.4.5_/node_modules/element-plus/es/components/message/style/css.mjs",
+      "file": "element-plus_es_components_message_style_css.js",
+      "fileHash": "f53a4502",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "src": "../../node_modules/.pnpm/vue-router@4.3.2_vue@3.4.27_typescript@5.4.5_/node_modules/vue-router/dist/vue-router.mjs",
+      "file": "vue-router.js",
+      "fileHash": "be8f8877",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-6Z4TKMMZ": {
+      "file": "chunk-6Z4TKMMZ.js"
+    },
+    "chunk-5BKZL5HB": {
+      "file": "chunk-5BKZL5HB.js"
+    },
+    "chunk-DLA3JP5G": {
+      "file": "chunk-DLA3JP5G.js"
+    }
+  }
+}
