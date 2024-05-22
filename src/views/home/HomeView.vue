@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="bg-filter" :class="{ active: active }"></div>
+    <div class="bg-filter" :class="{ active: panelActive }"></div>
     <div class="search-engine-list flex pt-[20%]">
       <div
         class="search-engine"
@@ -17,7 +17,7 @@
       <el-input
         ref="inputRef"
         class="searh-input"
-        :class="{ active: active }"
+        :class="{ active: foucsActive }"
         v-model="inputValue"
         @focus="handleFocus"
         @blur="handleBlur"
@@ -26,7 +26,7 @@
     </div>
 
     <div class="content-panel-wrapper">
-      <div class="content-panel" :class="{ 'show-content': active }">
+      <div class="content-panel" :class="{ 'show-content': panelActive }">
         <div class="search-history-list">
           <div
             class="search-history-item"
@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-    <DateView v-show="!active" />
+    <DateView v-show="!panelActive" />
   </div>
 </template>
 
@@ -75,7 +75,8 @@ const engineList = [
 ]
 const inputRef = ref<InstanceType<typeof ElInput>>()
 const inputValue = ref('')
-const active = ref(false)
+const foucsActive = ref(false)
+const panelActive = ref(false)
 const activeEngine = ref(engineList[0].name)
 
 const [searchHistory, saveLocalSearchHistory] = useLocalStorage('searchHistory', [])
@@ -84,14 +85,21 @@ const activeEngineObj = computed(() => {
   return engineList.find((item) => item.name === activeEngine.value)
 })
 const handleFocus = (e: Event) => {
-  // console.log(e)
-  active.value = true
+  console.log('handleFocus')
+  foucsActive.value = true
+  panelActive.value = true
 }
 const handleBlur = (e: Event) => {
   //点击输入框，点击面板都不需要收起面板
   console.log('handleBlur')
+  // const target = document.querySelector('.show-content')
+  // if (target) {
+  //   e.preventDefault()
+  //   return
+  // }
 
-  active.value = false
+  foucsActive.value = false
+  panelActive.value = false
 }
 const handleClick = (e: Event) => {
   e.preventDefault()
