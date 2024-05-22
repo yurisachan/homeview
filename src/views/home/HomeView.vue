@@ -89,6 +89,8 @@ const handleFocus = (e: Event) => {
 }
 const handleBlur = (e: Event) => {
   //点击输入框，点击面板都不需要收起面板
+  console.log('handleBlur')
+
   active.value = false
 }
 const handleClick = (e: Event) => {
